@@ -7,7 +7,7 @@ export default function HomePage() {
 
   useEffect(() => {
     // Pobieramy tylko dostępne auta z API i ucinamy do 3 sztuk na pokaz
-    axios.get('${import.meta.env.REACT_APP_API_URL}/api/Samochody/dostepne')
+    axios.get(`${import.meta.env.REACT_APP_API_URL}/api/Samochody/dostepne`)
       .then(res => setSamochody(res.data.slice(0, 3)))
       .catch(err => console.error(err));
   }, []);

@@ -25,7 +25,7 @@ export default function AdminWypozyczeniaPage() {
 
   const fetchWypozyczenia = () => {
     setLadowanie(true);
-    axios.get('${import.meta.env.REACT_APP_API_URL}/api/Wypozyczenia/admin/wszystkie')
+    axios.get(`${import.meta.env.REACT_APP_API_URL}/api/Wypozyczenia/admin/wszystkie`)
       .then(response => {
         setWypozyczenia(response.data);
         setLadowanie(false);

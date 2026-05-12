@@ -27,7 +27,7 @@ export default function KatalogPojazdow() {
     }
     setUser(JSON.parse(userStorage));
 
-    axios.get('${import.meta.env.REACT_APP_API_URL}/api/Samochody/dostepne')
+    axios.get(`${import.meta.env.REACT_APP_API_URL}/api/Samochody/dostepne`)
       .then(response => {
         setSamochody(response.data);
         setLadowanie(false);
@@ -105,7 +105,7 @@ export default function KatalogPojazdow() {
         statusId: 1 // Status 1 = Aktywne
       };
 
-      await axios.post('${import.meta.env.REACT_APP_API_URL}/api/Wypozyczenia', payload);
+      await axios.post(`${import.meta.env.REACT_APP_API_URL}/api/Wypozyczenia`, payload);
       alert("Twoje wypożyczenie zostało zgłoszone pomyślnie!");
       
       setSelectedCar(null);
