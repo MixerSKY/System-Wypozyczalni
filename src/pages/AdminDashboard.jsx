@@ -45,7 +45,7 @@ export default function AdminDashboard() {
 
   const fetchSamochody = () => {
     setLadowanie(true);
-    axios.get(`${import.meta.env.REACT_APP_API_URL}/api/Samochody`)
+    axios.get(`${import.meta.env.VITE_API_URL}/api/Samochody`)
       .then(response => {
         setSamochody(response.data);
         setLadowanie(false);
@@ -78,7 +78,7 @@ export default function AdminDashboard() {
         kategoriaId: parseInt(formData.kategoriaId)
       };
 
-      await axios.post(`${import.meta.env.REACT_APP_API_URL}/api/Samochody`, dataToSend);
+      await axios.post(`${import.meta.env.VITE_API_URL}/api/Samochody`, dataToSend);
       
       setIsModalOpen(false);
       fetchSamochody();
