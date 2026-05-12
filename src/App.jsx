@@ -5,7 +5,7 @@ import AdminDashboard from './pages/AdminDashboard';
 import KlienciPage from './pages/Kliencipage';
 import KlientDashboard from './pages/KlientDashboard';
 import KatalogPojazdow from './pages/KatalogPojazdow';
-import AdminWypozyczeniaPage from "./pages/AdminWypozyczenia";
+import AdminWypozyczeniaPage from "./pages/AdminWypozyczeniapage";
 
 function App() {
   return (
