@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import HomePage from './pages/HomePage';
-import LoginPage from './pages/LoginPage';
+import HomePage from './pages/Homepage';
+import LoginPage from './pages/Loginpage'; 
 import AdminDashboard from './pages/AdminDashboard';
-import KlienciPage from './pages/KlienciPage';
+import KlienciPage from './pages/Kliencipage';
 import KlientDashboard from './pages/KlientDashboard';
 import KatalogPojazdow from './pages/KatalogPojazdow';
-import AdminWypozyczeniaPage from './pages/AdminWypozyczeniaPage';
+import AdminWypozyczeniaPage from "./pages/AdminWypozyczenia";
 
 function App() {
   return (
