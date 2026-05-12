@@ -25,7 +25,7 @@ export default function KlientDashboard() {
     setUser(parsedUser);
     
     // Pobieramy historię wypożyczeń konkretnego klienta
-    axios.get(`${process.env.REACT_APP_API_URL}/api/Wypozyczenia/klient/${parsedUser.klientId}`)
+    axios.get(`${import.meta.env.REACT_APP_API_URL}/api/Wypozyczenia/klient/${parsedUser.klientId}`)
       .then(response => {
         setWypozyczenia(response.data);
         setLadowanie(false);

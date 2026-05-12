@@ -26,7 +26,7 @@ export default function KlienciPage() {
 
   const fetchKlienci = () => {
     setLadowanie(true);
-    axios.get('${process.env.REACT_APP_API_URL}/api/Klienci')
+    axios.get('${import.meta.env.REACT_APP_API_URL}/api/Klienci')
       .then(response => {
         setKlienci(response.data);
         setLadowanie(false);
@@ -50,7 +50,7 @@ export default function KlienciPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('${process.env.REACT_APP_API_URL}/api/Klienci', formData);
+      await axios.post('${import.meta.env.REACT_APP_API_URL}/api/Klienci', formData);
       setIsModalOpen(false);
       fetchKlienci();
       setFormData({

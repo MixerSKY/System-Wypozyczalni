@@ -25,7 +25,7 @@ export default function AdminWypozyczeniaPage() {
 
   const fetchWypozyczenia = () => {
     setLadowanie(true);
-    axios.get('${process.env.REACT_APP_API_URL}/api/Wypozyczenia/admin/wszystkie')
+    axios.get('${import.meta.env.REACT_APP_API_URL}/api/Wypozyczenia/admin/wszystkie')
       .then(response => {
         setWypozyczenia(response.data);
         setLadowanie(false);
@@ -44,7 +44,7 @@ export default function AdminWypozyczeniaPage() {
   // Magia zmiany statusu w locie
   const handleStatusChange = async (wypozyczenieId, nowyStatusId) => {
     try {
-      await axios.patch(`${process.env.REACT_APP_API_URL}/api/Wypozyczenia/${wypozyczenieId}/status/${nowyStatusId}`);
+      await axios.patch(`${import.meta.env.REACT_APP_API_URL}/api/Wypozyczenia/${wypozyczenieId}/status/${nowyStatusId}`);
       // Odśwież listę po udanej zmianie w bazie
       fetchWypozyczenia();
     } catch (error) {
